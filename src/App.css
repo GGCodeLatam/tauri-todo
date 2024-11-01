@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Fondo principal oscuro con un toque azulado */
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+
+    /* Tarjetas un poco más claras que el fondo */
+    --card: 223 47% 14%;
+    --card-foreground: 213 31% 91%;
+
+    /* Popovers/Dropdowns */
+    --popover: 222 47% 11%;
+    --popover-foreground: 215 20.2% 95.1%;
+
+    /* Color primario en azul vibrante */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    /* Color secundario más sutil */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Elementos atenuados */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Acentos */
+    --accent: 217.2 32.6% 20.5%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Color destructivo (rojo) */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Bordes y inputs */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    /* Radio de bordes */
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Personalización del scroll */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--secondary));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.8);
+  }
+}
